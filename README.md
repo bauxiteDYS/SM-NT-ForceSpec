@@ -1,4 +1,5 @@
 # SM-NT-ForceSpec
-Sourcemod plugin for Neotokyo that forces all players into spectator team
+Sourcemod plugin for Neotokyo that forces all players into the Spectator team.
 
-Use the command !forcespec
+# Usage
+Can only be used by Admins, with the command sm_forcespec.
