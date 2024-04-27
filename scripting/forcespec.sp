@@ -19,7 +19,9 @@ public Action Command_Force(int client, int args)
 	for(int i = 1; i <= MaxClients; i++)
 	{	
 		ForceSpec(i);
-	}			
+	}
+
+	return Plugin_Handled;
 }
 
 void ForceSpec(int i)
