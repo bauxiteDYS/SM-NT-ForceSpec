@@ -11,17 +11,15 @@ public Plugin myinfo = {
 
 public OnPluginStart()
 {
-	LoadTranslations("common.phrases");
 	RegAdminCmd("sm_forcespec", Command_Force, ADMFLAG_GENERIC);	
 }
 
-public Action Command_Force(client, args)
+public Action Command_Force(int client, int args)
 {
 	for(int i = 1; i <= MaxClients; i++)
-	
-		{	
-			ForceSpec(i);
-		}			
+	{	
+		ForceSpec(i);
+	}			
 }
 
 void ForceSpec(int i)
