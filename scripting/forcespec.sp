@@ -27,7 +27,6 @@ public Action Command_Force(int client, int args)
 void ForceSpec(int i)
 {
 	if(IsClientConnected(i) && IsClientInGame(i) && ! IsClientSourceTV(i))
-
 	{	
 		FakeClientCommand(i, "kill"); 
 		FakeClientCommand(i, "jointeam 1");
