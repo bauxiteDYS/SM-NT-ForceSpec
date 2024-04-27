@@ -1,14 +1,13 @@
 #include <sourcemod>
 #include <sdktools>
 
-public Plugin myinfo =
-{	
-	name = "NT Force to Spectator",
+public Plugin myinfo = {	
+	name = "Force to Spectator",
 	description = "Use !forcespec to move all players to Spectator team",
 	author = "bauxite",
 	version = "1.0",
 	url = "https://discord.gg/afhZuFB9A5",
-}
+};
 
 public OnPluginStart()
 {
@@ -21,11 +20,11 @@ public Action Command_Force(client, args)
 	for(int i = 1; i <= MaxClients; i++)
 	
 		{	
-		ForceSpec(i)
+			ForceSpec(i);
 		}			
 }
 
-void ForceSpec(i)
+void ForceSpec(int i)
 {
 	if(IsClientConnected(i) && IsClientInGame(i) && ! IsClientSourceTV(i))
 
