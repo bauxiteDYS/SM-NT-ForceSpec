@@ -5,7 +5,7 @@ public Plugin myinfo = {
 	name = "Force to Spectator",
 	description = "Use !forcespec to move all players to Spectator team",
 	author = "bauxite",
-	version = "1.0",
+	version = "0.1.0",
 	url = "https://discord.gg/afhZuFB9A5",
 };
 
@@ -26,7 +26,7 @@ public Action Command_Force(int client, int args)
 
 void ForceSpec(int i)
 {
-	if(IsClientConnected(i) && IsClientInGame(i) && ! IsClientSourceTV(i))
+	if(IsClientInGame(i) && !IsClientSourceTV(i))
 	{	
 		FakeClientCommand(i, "kill"); 
 		FakeClientCommand(i, "jointeam 1");
